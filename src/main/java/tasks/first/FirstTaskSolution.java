@@ -84,7 +84,7 @@ public class FirstTaskSolution implements FirstTask{
                     try {
                         counter = longs.peekLast() + counter;
                     } catch (NullPointerException e) {
-                        System.out.println("Неверный ввод");;
+                        throw new IllegalArgumentException();
 
                     }
                 }
@@ -108,7 +108,6 @@ public class FirstTaskSolution implements FirstTask{
                     try {
                         counter = longs.peekLast() / counter;
                     } catch (NullPointerException e) {
-                        System.out.println("Неверный ввод");
                         throw new IllegalArgumentException();
                     }
 
@@ -126,7 +125,7 @@ public class FirstTaskSolution implements FirstTask{
         if (longs.isEmpty()) {
             return result;
         } else {
-            throw new IllegalArgumentException("Неверный ввод");
+            throw new IllegalArgumentException();
         }
     }
 }
