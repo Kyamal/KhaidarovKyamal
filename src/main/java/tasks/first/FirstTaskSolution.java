@@ -14,11 +14,11 @@ public class FirstTaskSolution implements FirstTask{
         vertexes.addFirst(startIndex);
         result.add(startIndex);
         while (!vertexes.isEmpty()) {
-            for (int i = 0; i < adjacencyMatrix[startIndex - 1].length; i++) {
-                if (adjacencyMatrix[startIndex - 1][i]) {
-                    if (check(result, i + 1)) {
-                        vertexes.addLast(i + 1);
-                        result.add(i + 1);
+            for (int i = 0; i < adjacencyMatrix[startIndex].length; i++) {
+                if (adjacencyMatrix[startIndex][i]) {
+                    if (check(result, i)) {
+                        vertexes.addLast(i);
+                        result.add(i);
                     }
                 }
 
